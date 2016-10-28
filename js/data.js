@@ -23,16 +23,20 @@
 
   }
 
-  addToDo('HEYYYYYYYY');
+  // addToDo('HEYYYYYYYY');
 
 
-  //
-  // document.querySelector('form').addEventListener('submit', function(event){
-  //     event.preventDefault();
-      // document.getElementById('donate').style.display = 'none';
-      // document.getElementById('topMessage').style.display = 'none';
-      // console.log('hit it');
-  // })
+
+  document.querySelector('form').addEventListener('submit', function submit(event){
+      event.preventDefault();
+
+      addToDo(document.querySelector('.new-todo').value)
+      console.log('hit it')
+  })
+
+
+
+
 
   // my special code
 
