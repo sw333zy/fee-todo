@@ -2,6 +2,8 @@
   'use strict';
   window.todo = window.todo || {};
 
+
+
     function addToDo(text) {
       var li = document.createElement('li');
       var article = document.createElement('article');
@@ -22,13 +24,23 @@
     }
 
 
-
+  var myArray = [];
+  
     document.querySelector('form').addEventListener('submit', function submit(event){
         event.preventDefault();
 
         addToDo(document.querySelector('.new-todo').value);
         console.log('hit it');
 
-        
+        var todomo = document.querySelector('.new-todo').value;
+
+        var time = {
+          text: submit,
+          time: Date.now()
+        };
+        myArray.push(time);
+        console.log(myArray);
+        addToDo(todomo);
+
     });
 }());
