@@ -46,13 +46,21 @@
       if (event.target.parentNode.className === 'completed') {
         event.target.parentNode.classList.add('completed');
         window.todo.listTotal(1);
-      } else {
-        event.target.parentNode.classList.remove('completed');
+      }
+      else {
+        event.target.parentNode.classList.add('completed');
         window.todo.listTotal(-1);
       }
       todoList();
 
     }
+
+  else if (event.target.className === 'delete') {
+      event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
+      window.todo.listTotal(-1);
+
+  }
+  todoList();
 
 
   });
