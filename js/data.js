@@ -15,7 +15,10 @@
       };
 
       itemArray.push(itemList);
+      console.log(itemArray);
     };
+
+
 
     window.todo.listTotal = function listTotal(update) {
       incompleteItems += update;
@@ -24,6 +27,7 @@
     window.todo.listings = function listings() {
       return incompleteItems;
     };
+
 
 
 }());

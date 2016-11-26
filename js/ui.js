@@ -67,5 +67,6 @@
   function todoList() {
          document.querySelector('.incomplete-items').innerText = window.todo.listings();
        }
+  
 
 }());
